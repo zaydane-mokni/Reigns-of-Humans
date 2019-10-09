@@ -2,7 +2,7 @@ fetch('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/stm32cubemx-pjsxg
 .then(response => response.json())
 .then(data => {
 console.log(data)
-console.log(typeof data)
-console.log(Object.values(data));
+console.log(data[0].name)
+console.log(data[0]._id)
 })
 .catch(error => console.error(error))
