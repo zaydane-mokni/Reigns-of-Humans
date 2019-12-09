@@ -1,3 +1,8 @@
+<?php 
+//debut de la session 0=deco
+session_start();
+$_SESSION["ouverture_session"] = true;
+?>
 <html>
     <head>
         <title>Relevé de notes</title>
@@ -21,7 +26,7 @@
         <a class="nav-link" href="rules.php">Règles <span class="badge badge-light">New</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Connexion</a>
+        <a class="nav-link" href="connexion.php"><?php if($_SESSION["ouverture_session"]==false){echo "Connexion";}else{echo "Deconnexion";}?></a>
       </li>
     </ul>
   </div>

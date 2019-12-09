@@ -1,4 +1,14 @@
+<?php
+session_start();
+if($_SESSION["ouverture_session"] == false){
+?>  <?php 
+echo "Redirection vers Connexion";
+}
+else{
+?>
+
 <!doctype html>
+
 <html lang="fr">
     <head>
         <meta charset="utf-8"/>
@@ -223,3 +233,7 @@
 
 </body>
 </html>
+
+<?php
+}
+?>
