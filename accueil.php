@@ -1,10 +1,11 @@
-<?php
-session_start();
+<?php /*
 if($_SESSION["ouverture_session"] == false){
-?>  <?php 
-echo "Redirection vers Connexion";
+?>  
+<?php 
+  header('Location: Connexion.php');
+  exit();
 }
-else{
+  else{*/
 ?>
 
 <!doctype html>
@@ -219,21 +220,9 @@ else{
      document.writeln(" <div class='demo'><header class='demo__header'></header> <div class='demo__content'>   <div class='demo__card-cont'> <div class='demo__card'> <div class='demo__card__top brown'> <div class='demo__card__img'></div>  <p class='demo__card__name'>Carte "+num+"</p> </div> <div class='demo__card__btm'> <p class='demo__card__we'>Whatever</p> </div>  <div class='demo__card__choice m--reject'></div> <div class='demo__card__choice m--like'></div>  <div class='demo__card__drag'></div> </div> <p class='demo__tip'>Swipe left or right</p> </div> </div>");}
 
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+  </body>
 </html>
 
-<?php
-}
+<?php/*
+}*/
 ?>
