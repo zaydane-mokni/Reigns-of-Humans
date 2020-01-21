@@ -1,0 +1,66 @@
+#swiper {
+  /*width: 350px;*/
+  margin: 0 auto;
+}
+
+#swiper-card {
+  background-color: white;
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.head-title {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.swiper-card-img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.swiper-card-info {
+  padding: 20px;
+  user-select: none;
+}
+
+/*   -- CSS ANIMATIONS! --   */
+
+@keyframes fadeDownIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes leftSwipe {
+  0% {
+    transform: rotate(0deg) translate(0,0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-10deg) translate(-200px,20px);
+    opacity: 0;
+  }
+}
+
+@keyframes rightSwipe {
+  0% {
+    transform: rotate(0deg) translate(0,0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(10deg) translate(200px,20px);
+    opacity: 0;
+  }
+}
+
