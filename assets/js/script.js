@@ -189,14 +189,14 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
           },
           "effect_yes": {
               "religion": 0,
-              "army": 0,
+              "army": -20,
               "population": 0,
-              "argent": 0
+              "argent": -10
           },
           "effect_no": {
               "religion": 0,
-              "army": 0,
-              "population": 0,
+              "army": -20,
+              "population": -10 ,
               "argent": 0
           },
           "condition": {
@@ -224,15 +224,15 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
               "argent": 0
           },
           "effect_yes": {
-              "religion": 0,
+              "religion": -20,
               "army": 0,
               "population": 0,
-              "argent": 0
+              "argent": -10
           },
           "effect_no": {
               "religion": 0,
-              "army": 0,
-              "population": 0,
+              "army": -20,
+              "population": -10,
               "argent": 0
           },
           "condition": {
@@ -280,11 +280,30 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
     document.getElementById('religion').style.background = "transparent"  
     document.getElementById('population').style.background = "transparent" 
     document.getElementById('argent').style.background = "transparent"  
+     // stattement end game
+      if (document.getElementById('army').innerHTML < 20 ||                         document.getElementById('army').innerHTML > 60 ){
+                $(document).ready(function(){
+                    $('#modal_army').modal('show');
+                              });         
+     }else if(document.getElementById('religion').innerHTML < 20 || document.getElementById('religion').innerHTML > 60) {
+                $(document).ready(function(){
+                    $('#modal_religion').modal('show');
+                              });                             
+     }else if(document.getElementById('population').innerHTML < 20 || document.getElementById('population').innerHTML > 60) {
+                $(document).ready(function(){
+                    $('#modal_population').modal('show');
+                              });  
+     }else if(document.getElementById('argent').innerHTML < 20 || document.getElementById('army').innerHTML > 60) {
+              $(document).ready(function(){
+                    $('#modal_argent').modal('show');
+                              });  
+     };
      
- }
+     
+     
+     
+ };
     
-
-
   //Trigger css animations and populate card values
   function leftSwipe(){
     currentCardIndex++;
@@ -295,8 +314,11 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
     army.innerHTML =  +army.innerHTML + +currentCardData.effect_no.army;
     religion.innerHTML =  +religion.innerHTML + +currentCardData.effect_no.religion;
     population.innerHTML =  +population.innerHTML + +currentCardData.effect_no.population;
-    argent.innerHTML =  +population.innerHTML + +currentCardData.effect_no.population;    
+    argent.innerHTML =  +population.innerHTML + +currentCardData.effect_no.population;   
+       
     populateNextCard();
+        
+        
     },500);
   }
   function rightSwipe(){
@@ -313,8 +335,26 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
     },500);
   }
 
-// ----Swiping inputs below-----
+// ----Swiping with button-----
 
+    document.getElementById('rep_oui').onclick=function(){rightSwipe()};
+    
+    document.getElementById('rep_non').onclick=function(){leftSwipe()};
+    
+// ----new game----
+    function refreshPage(){
+            window.location.reload(true);
+        };
+    
+    document.getElementById('refresh_army').onclick=function(){refreshPage()};
+        
+    document.getElementById('refresh_religion').onclick=function(){refreshPage()};
+    
+    document.getElementById('refresh_argent').onclick=function(){refreshPage()};
+        
+    document.getElementById('refresh_population').onclick=function(){ refreshPage()};
+
+    
 //---Keyboard Input
   //Arrow keys
   document.onkeydown = function(e){

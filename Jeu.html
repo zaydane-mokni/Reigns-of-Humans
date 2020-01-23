@@ -28,7 +28,7 @@
                     <h4 class="text-uppercase mb-4"></h4>
                     <p></p>
                 </div>
-                <div class="col-md-4 mb-5 mb-lg-0">
+                <div class="col-md-5 col-lg-6 col-xl-5 mb-5 mb-lg-0">
                     <h4 class="text-uppercase"></h4>
                     <ul class="list-inline" style="padding-left: 30px;">
                         <li class="list-inline-item" style="padding-right: 10px;"><button class="btn btn-outline-light btn-social text-center rounded-circle" type="button"><i class="fas fa-cross fa-fw"></i></button><button class="btn btn-outline-light btn-social text-center rounded-circle" type="button"><i class="fa fa-dollar fa-fw"></i></button>
@@ -36,7 +36,7 @@
                                 class="btn btn-outline-light btn-social text-center rounded-circle" type="button"><i class="fas fa-theater-masks fa-fw"></i></button><button class="btn btn-outline-light btn-social text-center rounded-circle" type="button"><i class="fas fa-gavel"></i></button></li>
                         <li class="list-inline-item"><button class="btn btn-outline-light btn-social text-center rounded-circle" id="religion" type="button"></button><button class="btn btn-outline-light btn-social text-center rounded-circle" id="argent" type="button"></button>
                             <button
-                                class="btn btn-outline-light btn-social text-center rounded-circle" id="population" type="button"></button><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" id="army" href="#"></a></li>
+                                class="btn btn-outline-light btn-social text-center rounded-circle" id="population" type="button"></button><button class="btn btn-outline-light btn-social text-center rounded-circle" id="army" type="button"></button></li>
                     </ul>
                     <ul class="list-inline" style="padding-left: 30px;"></ul>
                 </div>
@@ -69,6 +69,46 @@
         <div class="container"><small>Copyright ©&nbsp;Brand 2020</small></div>
     </div>
     <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal_army">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>Vos généraux vous se sont soulevé contre vous ... le roi est mort</p><img src="assets/img/maxresdefault-removebg-preview.png" style="height: 300px;"></div>
+                <div class="modal-footer"><button class="btn btn-light" id="refresh_army" type="button" data-dismiss="modal">Rejouer !!</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal_religion">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>Une secte a émergés des profondeurs et c'est élévé contre vous ... le roi est mort</p><img src="assets/img/maxresdefault-removebg-preview.png" style="height: 300px;"></div>
+                <div class="modal-footer"><button class="btn btn-light" id="refresh_religion" type="button" data-dismiss="modal">Rejouer !!</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal_population">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>La population de votre royaume souffre enormement et c'est soulevé ... le roi est mort </p><img src="assets/img/maxresdefault-removebg-preview.png" style="height: 300px;"></div>
+                <div class="modal-footer"><button class="btn btn-light" id="refresh_population" type="button" data-dismiss="modal">Rejouer !!</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal_argent">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>l'argent ne fais pas le bonheure me direz vous ! ... le roi est mort&nbsp; </p><img src="assets/img/maxresdefault-removebg-preview.png" style="height: 300px;"></div>
+                <div class="modal-footer"><button class="btn btn-light" id="refresh_argent" type="button" data-dismiss="modal">Rejouer !!</button></div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
