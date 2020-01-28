@@ -244,16 +244,16 @@
                             <hr class="star-dark mb-5">
                             <form id="contactForm" name="sentMessage" novalidate="novalidate">
                                 <div class="control-group">
-                                    <div id="email" class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" id="email" required="" placeholder="Email"><small class="form-text text-danger help-block"></small></div>
+                                    <div  class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" id="email" type="email" required="" placeholder="Email"><small class="form-text text-danger help-block"></small></div>
                                 </div>
                                 <div class="control-group">
-                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label><input class="form-control" type="password" placeholder="Mot de passe" required=""><small class="form-text text-danger help-block"></small></div>
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label><input class="form-control" type="password" placeholder="Mot de passe" id="password" required=""><small class="form-text text-danger help-block"></small></div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button" id="connexion" >Save</button></div>
             </div>
         </div>
     </div>
@@ -264,6 +264,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/freelancer.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_P_59m0uoGghl5GJBQZ2PfBYn4lmpdwQ",
+    authDomain: "reigns-372b8.firebaseapp.com",
+    databaseURL: "https://reigns-372b8.firebaseio.com",
+    projectId: "reigns-372b8",
+    storageBucket: "reigns-372b8.appspot.com",
+    messagingSenderId: "1032028927072",
+    appId: "1:1032028927072:web:540c5c9bddd1dc03adff05",
+    measurementId: "G-J460GEV8M4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+  <script src="assets/js/connexion.js"></script>
 </body>
 
 </html>
