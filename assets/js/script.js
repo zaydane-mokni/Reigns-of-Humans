@@ -275,35 +275,35 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
     religion.innerHTML =  +religion.innerHTML + +currentCardData.effect_generale.religion;
     population.innerHTML =  +population.innerHTML + +currentCardData.effect_generale.population;
     argent.innerHTML =  +population.innerHTML + +currentCardData.effect_generale.population;
-     
-    document.getElementById('army').style.background = "transparent" 
-    document.getElementById('religion').style.background = "transparent"  
-    document.getElementById('population').style.background = "transparent" 
-    document.getElementById('argent').style.background = "transparent"  
+
+    document.getElementById('army').style.background = "transparent"
+    document.getElementById('religion').style.background = "transparent"
+    document.getElementById('population').style.background = "transparent"
+    document.getElementById('argent').style.background = "transparent"
      // stattement end game
       if (document.getElementById('army').innerHTML < 20 ||                         document.getElementById('army').innerHTML > 60 ){
                 $(document).ready(function(){
                     $('#modal_army').modal('show');
-                              });         
+                              });
      }else if(document.getElementById('religion').innerHTML < 20 || document.getElementById('religion').innerHTML > 60) {
                 $(document).ready(function(){
                     $('#modal_religion').modal('show');
-                              });                             
+                              });
      }else if(document.getElementById('population').innerHTML < 20 || document.getElementById('population').innerHTML > 60) {
                 $(document).ready(function(){
                     $('#modal_population').modal('show');
-                              });  
+                              });
      }else if(document.getElementById('argent').innerHTML < 20 || document.getElementById('army').innerHTML > 60) {
               $(document).ready(function(){
                     $('#modal_argent').modal('show');
-                              });  
+                              });
      };
-     
-     
-     
-     
+
+
+
+
  };
-    
+
   //Trigger css animations and populate card values
   function leftSwipe(){
     currentCardIndex++;
@@ -314,11 +314,11 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
     army.innerHTML =  +army.innerHTML + +currentCardData.effect_no.army;
     religion.innerHTML =  +religion.innerHTML + +currentCardData.effect_no.religion;
     population.innerHTML =  +population.innerHTML + +currentCardData.effect_no.population;
-    argent.innerHTML =  +population.innerHTML + +currentCardData.effect_no.population;   
-       
+    argent.innerHTML =  +population.innerHTML + +currentCardData.effect_no.population;
+
     populateNextCard();
-        
-        
+
+
     },500);
   }
   function rightSwipe(){
@@ -338,23 +338,23 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
 // ----Swiping with button-----
 
     document.getElementById('rep_oui').onclick=function(){rightSwipe()};
-    
+
     document.getElementById('rep_non').onclick=function(){leftSwipe()};
-    
+
 // ----new game----
     function refreshPage(){
             window.location.reload(true);
         };
-    
+
     document.getElementById('refresh_army').onclick=function(){refreshPage()};
-        
+
     document.getElementById('refresh_religion').onclick=function(){refreshPage()};
-    
+
     document.getElementById('refresh_argent').onclick=function(){refreshPage()};
-        
+
     document.getElementById('refresh_population').onclick=function(){ refreshPage()};
 
-    
+
 //---Keyboard Input
   //Arrow keys
   document.onkeydown = function(e){
@@ -414,5 +414,3 @@ fetch("http://1098ed33.ngrok.io/characters", requestOptions)
   populateNextCard();
 }
 )();
-
-
