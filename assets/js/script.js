@@ -5,31 +5,8 @@ religion.innerHTML = 50;
 argent.innerHTML =50;
 population.innerHTML= 50;
 
-function getCards(){
-var requestOptions = {
-method: 'GET',
-redirect: 'follow'
-};
-fetch("http://1098ed33.ngrok.io/cards", requestOptions)
-.then(response => response.json())
-.then(result => {cardInfo=result;})
-.catch(error => console.log('error', error));
-}
-
-function getcharachters(){
-var requestOptions = {
-method: 'GET',
-redirect: 'follow'
-};
-fetch("http://1098ed33.ngrok.io/characters", requestOptions)
-.then(response => response.json())
-.then(result => {characters=result; })
-.catch(error => console.log('error', error));
-}
-
 (function() {
   let card = document.getElementById("swiper-card");
-
   //Simulated JSON data
   const characters =
   [

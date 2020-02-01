@@ -49,4 +49,19 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+//Modal Connect and inscription
+ document.getElementById('ConnectVersInscription').onclick=function(){
+              $(document).ready(function(){
+                    $('#Inscription').modal('show');
+                    $('#connect-modal').modal('hide');
+                              });  
+                };
+    
+ document.getElementById('InscriptionVersCompte').onclick=function(){
+              $(document).ready(function(){
+                    $('#Inscription').modal('hide');
+                    $('#connect-modal').modal('show');
+                              });  
+                };  
+    
 })(jQuery); // End of use strict

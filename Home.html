@@ -26,7 +26,8 @@
                     <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-bs-hover-animate="pulse" href="#portfolio">A propos</a></li>
                     <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-bs-hover-animate="pulse" href="#regles">Regles</a></li>
                     <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-bs-hover-animate="pulse" href="Jeu.html">Jouer</a></li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link portfolio-item" data-bs-hover-animate="pulse" data-toggle="modal" href="#connect-modal" style="height: 56px;padding: 16px;">Connexion</a></li>
+                    <li id="ConnexionElement" class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link portfolio-item" data-bs-hover-animate="pulse" data-toggle="modal" href="#connect-modal" style="height: 56px;padding: 16px;">Connexion</a></li>
+                    <li id="DeconnexionElement" style="display: none" class="nav-item mx-0 mx-lg-1" role="presentation" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-bs-hover-animate="pulse" href="Home.html">Deconnexion</a></li>
                     <li class="nav-item" role="presentation"></li>
                 </ul>
             </div>
@@ -117,7 +118,11 @@
     </section>
     <div data-bs-parallax-bg="true" style="height: 500px;background-image: url(assets/img/reigns_game_of_thrones_logo_guide_actions_royales.jpg);background-position: center;background-size: cover;filter: hue-rotate(0deg) invert(0%) saturate(40%) sepia(24%);"></div>
     <footer class="footer text-center"><img src="assets/img/Reigns-Logo_Yellow-e1460028730879.png">
-
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4"></h4>
+                <p></p>
+            </div>
         </div>
     </footer>
     <div class="copyright py-4 text-center text-white">
@@ -232,39 +237,76 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade text-center" role="dialog" tabindex="-1" id="connect-modal">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
+                <div class="modal-header">
+                    <div style="margin-left: 25%;"><button class="btn btn-primary" data-bs-hover-animate="pulse" id="ConnectJaiCompte" type="button" style="margin-right: 30px;">J'ai déja un compte&nbsp;</button><button class="btn btn-primary" data-bs-hover-animate="pulse" id="ConnectVersInscription"
+                            type="button" style="margin-right: 30px;width: 162px;">Je m'inscris</button></div><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body text-center">
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
                             <h2 class="text-uppercase text-secondary mb-0">Connexion</h2>
                             <hr class="star-dark mb-5">
                             <form id="contactForm" name="sentMessage" novalidate="novalidate">
                                 <div class="control-group">
-                                    <div  class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" id="email" type="email" required="" placeholder="Email"><small class="form-text text-danger help-block"></small></div>
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" id="email" required="" placeholder="Email"><small class="form-text text-danger help-block"></small></div>
                                 </div>
                                 <div class="control-group">
-                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label><input class="form-control" type="password" placeholder="Mot de passe" id="password" required=""><small class="form-text text-danger help-block"></small></div>
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label><input class="form-control" type="password" id="password" placeholder="Mot de passe" required=""><small class="form-text text-danger help-block"></small></div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label>
+                                      <textarea class="form-control text-center" id="MsgError"></textarea>
+                                      <small class="form-text text-danger help-block"></small></div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button" id="connexion" >Save</button></div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary text-center" type="button" id="ConnectButton">Sauvergarder</button></div>
             </div>
         </div>
     </div>
-
+    <div class="modal fade text-center" role="dialog" tabindex="-1" id="Inscription">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="margin-left: 25%;"><button class="btn btn-primary" data-bs-hover-animate="pulse" id="InscriptionVersCompte" type="button" style="margin-right: 30px;">J'ai déja un compte&nbsp;</button><button class="btn btn-primary" data-bs-hover-animate="pulse" id="InscriptionJeMinscris"
+                            type="button" style="margin-right: 30px;width: 162PX;">Je m'inscris</button></div><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-uppercase text-secondary mb-0">Inscription</h2>
+                            <hr class="star-dark mb-5">
+                            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" id="emailInscription" type="email" placeholder="Email"><small class="form-text text-danger help-block"></small></div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label><input class="form-control" id="passwordInscription" type="password" placeholder="Mot de passe" required=""><small class="form-text text-danger help-block"></small></div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>mot de passe</label>
+                                      <textarea  class="form-control text-center" id="MsgErrorInsc"></textarea>
+                                      <small class="form-text text-danger help-block"></small></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary text-center" type="button" id="InscriptionButton">Inscription</button></div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/freelancer.js"></script>
     <script src="assets/js/script.js"></script>
-
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
 
@@ -290,6 +332,7 @@
 
 </script>
   <script src="assets/js/connexion.js"></script>
+
 </body>
 
 </html>
